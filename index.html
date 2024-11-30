@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitin Choudhary Seal Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nitin Choudhary Seal Generator</h1>
+        <form id="sealForm">
+            <label for="fileUpload">Upload Seal Numbers (CSV):</label>
+            <input type="file" id="fileUpload" accept=".csv" required>
+
+            <button type="button" id="downloadTemplate">Download Sample File</button>
+
+            <label for="labelSize">Select Label Size:</label>
+            <select id="labelSize" required>
+                <option value="4x4">4x4 inches</option>
+                <option value="4x2">4x2 inches</option>
+            </select>
+
+            <button type="submit">Generate PDF</button>
+        </form>
+        <div id="error" class="error"></div>
+    </div>
+
+    <!-- Include jsPDF and JsBarcode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
